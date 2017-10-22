@@ -64,7 +64,7 @@ export default {
   data() {
     return {
       channels: [],
-      show: 'online',
+      show: 'all'
     }
   },
   computed: {
@@ -77,11 +77,6 @@ export default {
           if(this.show === 'offline' && !channel.stream)
             return channel;
           });
-    }
-  },
-  methods: {
-    doclick: function(){
-      console.log("click");
     }
   },
   created() {
@@ -136,10 +131,6 @@ export default {
     margin-left: .2em;
   }
 
-  .status_icons {
-    /* margin botton, some lines make pretty */
-  }
-
   .stream_img {
     border-radius: 50%;
     border: 1px solid black;
@@ -174,11 +165,3 @@ export default {
   }
 
 </style>
-
-<!-- 
-this.imgUrl = image;
-	this.name = name;  y
-	this.game = game; y
-	this.status = status; y   
-	this.light = color;  //need to get from status
-	this.type = type; //dont need - can infer from status y  -->  
