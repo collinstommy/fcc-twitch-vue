@@ -129,6 +129,15 @@ export default {
   .status-text {
     font-size: .4em;
     margin-left: .2em;
+    cursor: pointer;
+  }
+
+  .status-text:hover {
+    transform: translateY(1px);
+  }
+
+  .status-text:active {
+    transform: translateY(2px);
   }
 
   .stream_img {
